@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="Offline-first study coach for BEU first-semester CSE students">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>BEU CSE Study Coach</title>
+</head>
+<body>
+  <div id="app">
+    <section id="onboarding" class="screen centered hidden">
+      <div class="brand-mark">🎓</div>
+      <h1>BEU CSE Study Coach</h1>
+      <p class="muted">Learn • Practice • Progress</p>
+      <div class="onboarding-card">
+        <h2>Welcome!</h2>
+        <p>Track your syllabus, plan study sessions, practice PYQs, and learn C—all from your phone.</p>
+        <label>Your name <span class="required">*</span>
+          <input id="profileName" type="text" placeholder="Enter your name" maxlength="40">
+        </label>
+        <label>Branch
+          <input value="CSE – BEU Patna" disabled>
+        </label>
+        <button class="primary full" id="startBtn">Start learning</button>
+      </div>
+    </section>
+
+    <section id="mainApp" class="hidden">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">BEU CSE STUDY COACH</div>
+          <h1 id="pageTitle">Home</h1>
+        </div>
+        <button class="icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
+      </header>
+
+      <main id="content"></main>
+
+      <nav class="bottom-nav">
+        <button data-page="home" class="nav-item active">🏠<span>Home</span></button>
+        <button data-page="schedule" class="nav-item">📅<span>Schedule</span></button>
+        <button data-page="syllabus" class="nav-item">📚<span>Syllabus</span></button>
+        <button data-page="pyq" class="nav-item">📝<span>PYQ</span></button>
+        <button data-page="learn" class="nav-item">💻<span>Learn C</span></button>
+        <button data-page="more" class="nav-item">☰<span>More</span></button>
+      </nav>
+    </section>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

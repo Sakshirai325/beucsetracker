@@ -1,0 +1,9 @@
+{
+  "name": "BEU CSE Study Coach",
+  "short_name": "BEU Study Coach",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7ff",
+  "theme_color": "#4f46e5",
+  "icons": []
+}
